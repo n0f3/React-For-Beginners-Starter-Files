@@ -1,4 +1,5 @@
 {
   "eslint.enable": true,
+  "vsicons.presets.angular": false,
   "eslint.nodePath": "./node_modules"
 }
