@@ -4,7 +4,6 @@ import { formatPrice } from '../helpers';
 class Fish extends React.Component {
   render() {
     const { details, index, orderDetails } = this.props;
-    console.log(`orderDetails: ${orderDetails}`);
     const isAvailable = details.status === 'available';
     const buttonText = isAvailable ? 'Add To Order' : 'Sold Out';
     return (

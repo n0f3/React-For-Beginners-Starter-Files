@@ -34,7 +34,6 @@ class App extends React.Component {
       this.setState({
         order: JSON.parse(localStorageRef)
       });
-      console.log(`${JSON.stringify(this.state)}`)
     }
   }
   componentWillUnmount() {
