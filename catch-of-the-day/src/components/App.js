@@ -92,8 +92,11 @@ class App extends React.Component {
               Object
                 .keys(this.state.fishes)
                 .map(key => 
-                  <Fish key={key} index={key} details={this.state.fishes[key]} orderDetails={this.state.order[key]}
-                    addToOrder={this.addToOrder}/>)
+                  <Fish 
+                  key={key} 
+                  index={key} 
+                  details={this.state.fishes[key]}
+                  addToOrder={this.addToOrder}/>)
             }
           </ul>
         </div>
@@ -107,10 +110,15 @@ class App extends React.Component {
           loadSamples={this.loadSamples} 
           fishes={this.state.fishes}
           updateFish={this.updateFish}
-          removeFish={this.removeFish}/>
+          removeFish={this.removeFish}
+          storeId={this.props.params.storeId}/>
       </div>
     )
   }
+}
+
+App.propTypes = {
+  params: React.PropTypes.object.isRequired
 }
 
 export default App;
