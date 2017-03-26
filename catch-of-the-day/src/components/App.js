@@ -11,11 +11,11 @@ class App extends React.Component {
     super();
     // need to bind the method to the object to make it available
     this.addFish = this.addFish.bind(this);
-    this.loadSamples = this.loadSamples.bind(this);
+    //this.loadSamples = this.loadSamples.bind(this);
     this.addToOrder = this.addToOrder.bind(this);
     this.removeFromOrder = this.removeFromOrder.bind(this);
     this.updateFish = this.updateFish.bind(this);
-    this.removeFish = this.removeFish.bind(this);
+    //this.removeFish = this.removeFish.bind(this);
     // This is going to be our initial state for the class
     this.state = {
         fishes: {},
@@ -59,16 +59,16 @@ class App extends React.Component {
     fishes[key] = newFish;
     this.setState({fishes});
   }
-  removeFish(key) {
+  removeFish = (key) => {
     const fishes = {...this.state.fishes};
     fishes[key] = null;
     this.setState({fishes});
-  }
-  loadSamples() {
+  };
+  loadSamples = () => {
     this.setState({
       fishes: sampleFishes
     });
-  }
+  };
   addToOrder(key) {
     // make a copy of our state
     const order = {...this.state.order};
